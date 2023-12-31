@@ -216,3 +216,13 @@ In addition to JSX transformation, Parcel handles various types of assets such a
 
 4. Hot Module Replacement (HMR):
 Parcel provides Hot Module Replacement (HMR), allowing developers to see immediate updates in the browser as they make changes to their JSX code. This speeds up the development process by eliminating the need for manual page reloads.
+
+
+
+# References
+- [Babel](https://babeljs.io/)
+- [Attribute Type](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-type)
+- [JS Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
+- [Babel Playground](https://babeljs.io/repl#)
+- [React without JSX](https://reactjs.org/docs/react-without-jsx.html)
+
