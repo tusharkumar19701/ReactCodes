@@ -165,7 +165,7 @@ In some cases, you might use non-JavaScript MIME types for specific scripting la
 ```
 
 
-# {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX
+# {TitleComponent} vs {<<TitleComponent/>>} vs {<<TitleComponent>><</TitleComponent>>} in JSX
 Ans: 
 1. {TitleComponent}:
 Embeds the value of the variable as text: This syntax treats TitleComponent as a JavaScript expression and inserts its value directly into the surrounding text content. It does not render the component itself.
