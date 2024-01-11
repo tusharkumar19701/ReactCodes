@@ -165,7 +165,7 @@ In some cases, you might use non-JavaScript MIME types for specific scripting la
 ```
 
 
-# {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX
+# {TitleComponent} vs {<<TitleComponent//>>} vs {<<TitleComponent>><<//TitleComponent>>} in JSX
 Ans: 
 1. {TitleComponent}:
 Embeds the value of the variable as text: This syntax treats TitleComponent as a JavaScript expression and inserts its value directly into the surrounding text content. It does not render the component itself.
@@ -216,3 +216,13 @@ In addition to JSX transformation, Parcel handles various types of assets such a
 
 4. Hot Module Replacement (HMR):
 Parcel provides Hot Module Replacement (HMR), allowing developers to see immediate updates in the browser as they make changes to their JSX code. This speeds up the development process by eliminating the need for manual page reloads.
+
+
+
+# References
+- [Babel](https://babeljs.io/)
+- [Attribute Type](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-type)
+- [JS Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
+- [Babel Playground](https://babeljs.io/repl#)
+- [React without JSX](https://reactjs.org/docs/react-without-jsx.html)
+
