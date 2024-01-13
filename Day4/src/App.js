@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./styles.css";
+import "../styles.css";
 //Default export
 import Header from "./components/Header";
 //Named export
