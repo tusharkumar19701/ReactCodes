@@ -629,7 +629,7 @@ These are just a few examples, and there are more hooks available for different 
 
 
 
-# useStata
+# useState
 The `useState` hook in React is used to add state to functional components. Before the introduction of hooks, functional components were stateless, meaning they didn't have the ability to manage local state. The `useState` hook allows functional components to declare and manage state variables, enabling them to hold and update state within the component.
 
 Here's a breakdown of the key uses of the `useState` hook:
