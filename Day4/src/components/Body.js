@@ -1,6 +1,6 @@
 import { restaurantList } from "../config";
 import RestaurantCard from "./RestaurantCard";
-import { useState } from "react"; // We import it using a named variable
+import { useState, useEffect } from "react"; // We import it using a named variable
 
 
 
@@ -16,6 +16,14 @@ const Body = () => {
   //searchText is a local state variable
   const [searchText, setSearchText] = useState(""); // To create state variables  - it returns [variable name, function to update the variable]
   
+  // useEffect is a hook - we call this function giving two parameters - one is the callback func. and the other is the dependency array
+  // this callback func is called on every re-render,but if you dont want to call it again and again so give an empty dependency array to call it just once
+
+  //suppose you want to call this useEffect only when the searchText changes then write searchText in the dependency array 
+  useEffect(() => {
+
+  }, []);
+
   const [restaurants,setRestaurants] = useState(restaurantList);
 
   return (
