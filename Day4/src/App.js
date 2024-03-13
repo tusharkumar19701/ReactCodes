@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Children } from "react";
 import ReactDOM from "react-dom/client";
 import "../styles.css";
 //Default export
@@ -8,7 +8,12 @@ import { Title } from './components/Header';
 
 import Body from "./components/Body";
 import Footer from "./components/Footer";
+import About from "./components/About";
+import Error from "./components/Error";
+import Contact from "./components/Contact";
+import RestaurantMenu from "./components/RestaurantMenu";
 import { IMG_CDN_URL } from "./config";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 
 // JSX can only have one parent
@@ -32,15 +37,42 @@ const AppLayout = () => {
   return (
     <>
       <Header />
-      <Body />
+      <Outlet />
       <Footer />
     </>
   );
 };
+
+
+const appRouter = createBrowserRouter([
+  {
+    path: '/',
+    element: <AppLayout />,
+    errorElement: <Error />,
+    children: [
+      {
+        path: '/about',
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />
+      },
+      {
+        path: '/',
+        element: <Body />,
+      },
+      {
+        path: '/restaurant/:id',
+        element: <RestaurantMenu />,
+      },
+    ],
+  },
+])
 
 //React uses virtual DOM
 // A representation of DOM is known as Virtual DOM
 // Reconciliation is a diff algorithm that React uses to find out the difference between actual and virtual DOM and finds out what needs to be updated and just updates the small part where it needs to be updated
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);
+root.render(<RouterProvider router={appRouter} />);
